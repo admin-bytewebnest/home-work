@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>BYTEWEBNEST — Домашнии задания</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="createimg-ai.png" type="image/x-png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <div class="logo">
+      <div>
+        <a href="index.html">
+          <img src="createimg-ai.png" width="100" alt="Логотип BYTEWEBNEST">
+        </a>
+      </div>
+      <div>
+        <h1>BYTEWEBNEST — Домашнии задания</h1>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="container">
+
+    <p class="title">
+      Нажимай на любое задание — оно откроется в окне ниже:
+    </p>
+
+    <div class="buttons">
+      <button onclick="loadTask('task1.html', this)">
+        <div class="button-link">
+          <div class="text-right">Задание 1</div>
+          <div class="text-left">— Подписи к изображениям</div>
+        </div>
+      </button>
+
+      <button onclick="loadTask('task2.html', this)">
+        <div class="button-link">
+          <div class="text-right">Задание 2</div>
+          <div class="text-left">— Названия произведений</div>
+        </div>
+      </button>
+
+      <button onclick="loadTask('task3.html', this)">
+        <div class="button-link">
+          <div class="text-right">Задание 3</div>
+          <div class="text-left">— Сокращения и подсказки</div>
+        </div>
+      </button>
+
+      <button onclick="loadTask('task4.html', this)">
+        <div class="button-link">
+          <div class="text-right">Задание 4</div>
+          <div class="text-left">— Определения терминов</div>
+        </div>
+      </button>
+
+      <button onclick="loadTask('task5.html', this)">
+        <div class="button-link">
+          <div class="text-right">Задание 5</div>
+          <div class="text-left">— Описательные списки</div>
+        </div>
+      </button>
+
+      <button onclick="loadTask('task6.html', this)">
+        <div class="button-link">
+          <div class="text-right">Задание 6</div>
+          <div class="text-left">— Даты, сочетания клавиш, ответы программ</div>
+        </div>
+      </button>
+      <button type="button" class="button-download">
+          <a class="button-download-link" href="https://admin-bytewebnest.github.io/home-work/materials/logo400.jpg" download>
+            <div class="button-link button-download-text">
+            Скачать материалы к уроку
+            </div>
+          </a>
+      </button>
+    </div>
+
+    <iframe id="taskFrame"></iframe>
+
+  </div>
+</main>
+
+<script>
+  function loadTask(page, button) {
+    const frame = document.getElementById("taskFrame");
+
+    // Сбрасываем класс активной кнопки
+    document.querySelectorAll(".buttons button").forEach(btn => {
+      btn.classList.remove("active");
+    });
+
+    // Добавляем активную кнопку
+    button.classList.add("active");
+
+    // Анимация iframe
+    frame.classList.remove("loaded");
+    frame.src = page;
+    frame.onload = () => {
+      frame.classList.add("loaded");
+    };
+
+    // Автопрокрутка к iframe
+    setTimeout(() => {
+      frame.scrollIntoView({ behavior: "smooth", block: "start" });
+    }, 150);
+  }
+</script>
+
+</body>
+</html>

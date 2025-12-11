@@ -1,0 +1,200 @@
+html {
+  scroll-behavior: smooth;
+}
+
+/* ============== BASE ============== */
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #0f0a1a;
+  font-family: "Segoe UI", sans-serif;
+  color: #e8e0ff;
+}
+
+header {
+  padding: 25px;
+  text-align: center;
+  background: linear-gradient(90deg, #7b2ff7, #c09bff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 28px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+/* ЛОГО-БЛОК */
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  margin-bottom: 10px;
+}
+
+.logo img {
+  width: 160px;
+}
+
+.logo h1 {
+  font-size: 32px;
+  margin: 0;
+}
+
+/* ============== CONTAINER ============== */
+
+.container {
+  max-width: 1100px;
+  width: 92%;
+  padding: 20px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+/* ============== BUTTON GRID ============== */
+
+.buttons {
+  margin: 0 auto 25px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  width: 100%;
+}
+
+/* КНОПКИ */
+
+button {
+  background: #1a102a;
+  border: 1px solid #7b2ff7;
+  padding: 12px 20px;
+  color: #c09bff;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 10px;
+  transition: 0.25s;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Hover */
+button:hover {
+  background: #7b2ff7;
+  color: #fff;
+  box-shadow: 0 0 12px #7b2ff7;
+}
+
+/* Активная кнопка */
+button.active {
+  background: #7b2ff7 !important;
+  color: #fff !important;
+  box-shadow: 0 0 14px #7b2ff7;
+  transform: translateY(-2px);
+}
+
+/* ============== IFRAME ============== */
+
+iframe {
+  width: 100%;
+  height: 380px;
+  background: #0f0a1a;
+  border: 2px solid #7b2ff7;
+  border-radius: 8px;
+  display: block;
+
+  /* Анимация появления */
+  opacity: 0;
+  transform: translateY(15px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+iframe.loaded {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ============== BUTTON-LINK FIX ============== */
+
+.button-link {
+  display: grid;
+  grid-template-columns: 25% 75%;
+  justify-content: center;
+  gap: 10px;
+}
+
+.text-right {
+  text-align: right;
+}
+.text-left {
+  text-align: left;
+}
+.title {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.button-download-text {
+  display: block;
+  margin: auto;
+}
+.button-download-link {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* ============== MEDIA QUERIES ============== */
+
+@media (max-width: 1100px) {
+  .logo {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .logo img {
+    width: 180px;
+  }
+
+  .logo h1 {
+    font-size: 26px;
+  }
+}
+
+@media (max-width: 700px) {
+  header {
+    font-size: 20px;
+    padding: 10px;
+  }
+
+  .buttons {
+    grid-template-columns: 1fr;
+  }
+
+  button {
+    font-size: 15px;
+    padding: 12px;
+  }
+
+  iframe {
+    height: 420px;
+  }
+
+  .logo img {
+    width: 140px;
+  }
+
+  .logo h1 {
+    font-size: 22px;
+  }
+}
+@media (min-width: 700px) {
+    .button-download {
+    grid-column: 1 / 3;
+    grid-row: 4 / 5;
+  }
+}
+
+
+
+
+

@@ -1,0 +1,37 @@
+body {
+  background: #0f0a1a;
+  color: #e8e0ff;
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  margin: 0;
+}
+
+main {
+  max-width: 650px;
+  margin: auto;
+}
+
+@media (max-width: 700px) {
+  main {
+    padding: 10px;
+  }
+}
+
+h2 {
+  color: #c09bff;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+p, li {
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+code {
+  color: #7b2ff7;
+}
+
+ol li {
+  margin-bottom: 8px;
+}
