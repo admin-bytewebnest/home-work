@@ -1,4 +1,4 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
@@ -10,10 +10,23 @@
 <h1>BYTEWEBNEST · Live Lesson</h1>
 
 <div class="grid">
-  <iframe src="editor.html" title="Код"></iframe>
-  <iframe src="preview.html" title="Результат"></iframe>
+  <iframe id="codeFrame" src="editor.html" title="Код"></iframe>
+  <iframe id="resultFrame" src="preview.html" title="Результат"></iframe>
 </div>
+
+<script>
+  const frames = [
+    document.getElementById('codeFrame'),
+    document.getElementById('resultFrame')
+  ];
+
+  setInterval(() => {
+    frames.forEach(frame => {
+      const baseSrc = frame.src.split('?')[0];
+      frame.src = baseSrc + '?t=' + Date.now();
+    });
+  }, 5000); // обновление каждые 5 секунд
+</script>
 
 </body>
 </html>
-
