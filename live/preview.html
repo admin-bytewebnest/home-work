@@ -1,1 +1,21 @@
+!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Preview</title>
+</head>
+<body>
+
+<script>
+fetch('lesson.html')
+  .then(res => res.text())
+  .then(html => {
+    document.open();
+    document.write(html);
+    document.close();
+  });
+</script>
+
+</body>
+</html>
 
