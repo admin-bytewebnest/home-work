@@ -1,4 +1,4 @@
-const RELOAD_INTERVAL = 8000; // 8 секунд
+const RELOAD_INTERVAL = 1000; // 1 секунда
 
 setInterval(() => {
   const preview = document.getElementById("previewFrame");
