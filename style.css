@@ -145,6 +145,44 @@ iframe.loaded {
   color: inherit;
   text-decoration: none;
 }
+.button-upload {
+  grid-column: 1 / 3;
+  border: 1px dashed #7b2ff7;
+  background: rgba(123, 47, 247, 0.05);
+}
+
+.button-upload:hover {
+  background: rgba(123, 47, 247, 0.15);
+}
+
+.button-upload-link {
+  display: block;
+  width: 100%;
+  height: 100%;
+  color: inherit;
+  text-decoration: none;
+}
+.button-upload {
+  grid-column: 1 / 3;
+  border: 1px dashed #7b2ff7;
+  background: rgba(123, 47, 247, 0.05);
+
+  /* центрируем содержимое */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.button-upload .button-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.button-upload .text-right,
+.button-upload .text-left {
+  text-align: center;
+}
+
 
 /* ============== MEDIA QUERIES ============== */
 
