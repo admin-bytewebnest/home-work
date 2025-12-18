@@ -198,9 +198,11 @@ iframe.loaded {
   .button-download {
     grid-column: 1 / 3;
     grid-row: 4 / 5;
+    
   }
   .botton-load {
     grid-column: 1 / 3;
     grid-row: 7 / 8;
   }
+  
 }
