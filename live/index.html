@@ -10,22 +10,19 @@
 <h1>BYTEWEBNEST · Live Lesson</h1>
 
 <div class="grid">
-  <iframe id="codeFrame" src="editor.html" title="Код"></iframe>
-  <iframe id="resultFrame" src="preview.html" title="Результат"></iframe>
+  <iframe id="codeFrame"></iframe>
+  <iframe id="previewFrame"></iframe>
 </div>
 
 <script>
-  const frames = [
-    document.getElementById('codeFrame'),
-    document.getElementById('resultFrame')
-  ];
+  function reloadIframes() {
+    const t = Date.now();
+    document.getElementById('codeFrame').src = 'editor.html?t=' + t;
+    document.getElementById('previewFrame').src = 'lesson.html?t=' + t;
+  }
 
-  setInterval(() => {
-    frames.forEach(frame => {
-      const baseSrc = frame.src.split('?')[0];
-      frame.src = baseSrc + '?t=' + Date.now();
-    });
-  }, 5000); // обновление каждые 5 секунд
+  reloadIframes();
+  setInterval(reloadIframes, 5000);
 </script>
 
 </body>
