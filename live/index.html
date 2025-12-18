@@ -9,20 +9,24 @@
 
 <h1>BYTEWEBNEST · Live Lesson</h1>
 
+<div class="controls">
+  <button id="refreshBtn">Обновить код</button>
+</div>
+
 <div class="grid">
-  <iframe id="codeFrame"></iframe>
-  <iframe id="previewFrame"></iframe>
+  <iframe id="editorFrame" src="editor.html" title="Код"></iframe>
+  <iframe id="previewFrame" src="preview.html" title="Результат"></iframe>
 </div>
 
 <script>
-  function reloadIframes() {
-    const t = Date.now();
-    document.getElementById('codeFrame').src = 'editor.html?t=' + t;
-    document.getElementById('previewFrame').src = 'lesson.html?t=' + t;
-  }
+  const refreshBtn = document.getElementById('refreshBtn');
+  const editor = document.getElementById('editorFrame');
+  const preview = document.getElementById('previewFrame');
 
-  reloadIframes();
-  setInterval(reloadIframes, 5000);
+  refreshBtn.addEventListener('click', () => {
+    editor.src = editor.src;
+    preview.src = preview.src;
+  });
 </script>
 
 </body>
