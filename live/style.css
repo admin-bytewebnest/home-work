@@ -29,4 +29,25 @@ iframe {
 pre {
   white-space: pre-wrap;
 }
+.controls {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.controls button {
+  background: #1a102a;
+  border: 1px solid #7b2ff7;
+  color: #c09bff;
+  padding: 10px 24px;
+  font-size: 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+.controls button:hover {
+  background: #7b2ff7;
+  color: #fff;
+  box-shadow: 0 0 12px #7b2ff7;
+}
 
