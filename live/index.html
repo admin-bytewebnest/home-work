@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>BYTEWEBNEST — Live Lesson</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>BYTEWEBNEST · Live Lesson</h1>
+
+<div class="controls">
+  <button id="refreshBtn">Обновить код</button>
+</div>
+
+<div class="grid">
+  <iframe id="editorFrame" src="editor.html" title="Код"></iframe>
+  <iframe id="previewFrame" src="preview.html" title="Результат"></iframe>
+</div>
+
+<script>
+  const refreshBtn = document.getElementById('refreshBtn');
+  const editor = document.getElementById('editorFrame');
+  const preview = document.getElementById('previewFrame');
+
+  refreshBtn.addEventListener('click', () => {
+    editor.src = editor.src;
+    preview.src = preview.src;
+  });
+</script>
+
+</body>
+</html>
