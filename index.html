@@ -1,128 +1,35 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <title>BYTEWEBNEST — Домашние задания</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="shortcut icon" href="createimg-ai.png" type="image/x-png">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Section</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-
-  <header>
-    <div class="container">
-      <div class="logo">
-        <div>
-          <a href="index.html">
-            <img src="createimg-ai.png" width="100" alt="Логотип BYTEWEBNEST">
-          </a>
-        </div>
-        <div>
-          <h1>BYTEWEBNEST — Домашние задания</h1>
-        </div>
-      </div>
-    </div>
-  </header>
-
-  <main>
-    <div class="container">
-
-      <p class="title">
-        Нажимай на любое задание — оно откроется в окне ниже:
-      </p>
-
-      <div class="buttons">
-        <button onclick="loadTask('task1.html', this)">
-          <div class="button-link">
-            <div class="text-right">Задание 1 </div>
-            <div class="text-left">— Google Maps через <code>iframe</code></div>
-          </div>
-        </button>
-
-        <button onclick="loadTask('task2.html', this)">
-          <div class="button-link">
-            <div class="text-right">Задание 2 </div>
-            <div class="text-left">— Видео с YouTube через <code>iframe</code></div>
-          </div>
-        </button>
-
-        <button onclick="loadTask('task3.html', this)">
-          <div class="button-link">
-            <div class="text-right">Задание 3 </div>
-            <div class="text-left">— Видео через тег <code>video</code></div>
-          </div>
-        </button>
-
-        <button onclick="loadTask('task4.html', this)">
-          <div class="button-link">
-            <div class="text-right">Задание 4 </div>
-            <div class="text-left">— Аудио через тег <code>audio</code></div>
-          </div>
-        </button>
-
-
-        <!-- <button onclick="loadTask('task6.html', this)">
-          <div class="button-link">
-            <div class="text-right">Задание 6</div>
-            <div class="text-left">— Практика семантики</div>
-          </div>
-        </button> -->
-        <button type="button" class="button-download">
-          <a class="button-download-link" href="https://admin-bytewebnest.github.io/home-work/materials/materials.zip"
-            download>
-            <div class="button-link button-download-text">
-              Скачать материалы к уроку
+    <div class="wrapper">
+        <header></header>
+        <main class="main">
+            <div class="main__title">
+                <h1>
+                    At Certo, mobile security <br> is not an afterthought, it’s <br> what we do.
+                </h1>
+                <p class="main__subtitle">With years of experience in mobile security and <br> spyware detection, our
+                    products have helped <br> countless people safeguard their devices and <br> find peace of mind.</p>
+                <div class="main__buttons">
+                    <button class="main__button-title">Get Certo for iPhone</button>
+                    <button class="main__button-title">Get Certo for Android</button>
+                </div>
             </div>
-          </a>
-        </button>
-        <button type="button" class="button-upload">
-          <!-- <a href="https://docs.google.com/forms/d/e/1FAIpQLSdAzaMTGCIlbCMwGGeP2GjejR8wZR4xN5k-oUmZA5c1UF0t0g/viewform"
-            target="_blank" rel="noopener noreferrer" class="button-upload-link"> -->
-            <div class="button-link">
-              <div class="text-right">Домашка</div>
-              <div class="text-left">— Загрузить на проверку (<em>Временно не работает</em>)</div>
+            <div class='main__images'>
+                <img class="main__img" src="images/cover.png" alt="">
             </div>
-          </a>
-        </button>
 
-        <div class="iframe-grid">
-          <iframe id="taskFrame"></iframe>
-        </div>
-      </div>
-
-
-
+        </main>
+        <footer></footer>
     </div>
-  </main>
-
-  <script>
-    function loadTask(page, button) {
-      const frame = document.getElementById("taskFrame");
-
-      // Сбрасываем класс активной кнопки
-      document.querySelectorAll(".buttons button").forEach(btn => {
-        btn.classList.remove("active");
-      });
-
-      // Добавляем активную кнопку
-      button.classList.add("active");
-
-      // Анимация iframe
-      frame.classList.remove("loaded");
-      frame.src = page;
-      frame.onload = () => {
-        frame.classList.add("loaded");
-      };
-
-      // Автопрокрутка к iframe
-      setTimeout(() => {
-        frame.scrollIntoView({ behavior: "smooth", block: "start" });
-      }, 150);
-    }
-  </script>
-
 </body>
 
 </html>
