@@ -99,3 +99,45 @@
   line-height: 22.5px;
   letter-spacing: 0%;
 }
+
+.grid {
+    display: grid;
+    width: 1200px;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: 1fr;
+    justify-content: center;
+    margin: auto;
+
+}
+.grid-item {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2,1fr);
+    height: 100%;
+    gap: 20px;
+    /* border: solid 1px black; */
+    place-items: center;
+}
+.grid-item > div {
+    /* align-self: start; */
+    padding: 40px;
+}
+.grid-item > div p,
+.grid-item > div h1 {
+    margin-bottom: 40px;
+} 
+.grid-item-2 {
+    grid-template-rows: 1fr;
+    align-self: center;
+    height: auto;
+}
+.grid-item__item {
+    /* height: 380px; */
+    /* align-self: center; */
+}
+.grid-item-3 {
+    /* height: 305px; */
+}
+.hidden {
+  display: none;
+}
