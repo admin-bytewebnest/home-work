@@ -1,61 +1,255 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Section</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Домашняя работа</title>
+    <link rel="stylesheet" href="./css/style.css">
 </head>
-
 <body>
-    <div class="wrapper">
-        <header class="hidden"></header>
-        <section class="main hidden">
-            <div class="main__title">
-                <h1>
-                    At Certo, mobile security <br> is not an afterthought, it’s <br> what we do.
-                </h1>
-                <p class="main__subtitle">With years of experience in mobile security and <br> spyware detection, our
-                    products have helped <br> countless people safeguard their devices and <br> find peace of mind.</p>
-                <div class="main__buttons">
-                    <button class="main__button-title">Get Certo for iPhone</button>
-                    <button class="main__button-title">Get Certo for Android</button>
+    <header class="header">
+    <div class="container">
+        <div class="header__inner">
+
+            <a href="#" class="header__logo">
+                <div class="header__logo-icon">
+                    <svg>
+                        <use href="./images/icons.svg#logo"></use>
+                    </svg>
                 </div>
-            </div>
-            <div class='main__images'>
-                <img class="main__img" src="images/cover.png" alt="">
-            </div>
 
-        </section>
-        <section class="grid">
-        <div class="grid-item">
-            <div><img src="images/img-1.png" alt=""></div>
-            <div>
-                <h1>Travel Relieves Stress</h1>
-                <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                <a href="#">learn more</a>
-            </div>
-            
+                <div class="header__logo-content">
+                    <div class="header__logo-title">
+                        SCSS Практика
+                    </div>
+
+                    <div class="header__logo-subtitle">
+                        Домашняя работа
+                    </div>
+                </div>
+            </a>
+
+            <a href="./rules.html" class="header__link">
+                Правила выполнения →
+            </a>
+
         </div>
-        <div class="grid-item grid-item-2">
-            <div class="grid-item__item">
-                <img src="images/img-2.png" alt="">
-            </div>
-        </div>
-        <div class="grid-item grid-item-3">
-            <div>
-                <h1>Travel Relieves Stress</h1>
-                <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                <a href="#">learn more</a>
-            </div>
-            <div>
-                <img src="images/img-3.png" alt="">
-            </div>
-        </div>
-    </section>
-        <footer class="hidden"></footer>
     </div>
-</body>
+</header>
+    <main>
+        <div class="container">
+            <section class="features features--before">
+                <div class="features__item features__item-title">
+                    <h2>01. Сетка — grid template columns</h2>
+                </div>
+                <div class="features__item features__item-fast">
+                    <div class="features__icon">
+                        <svg>
+                            <use href="./images/icons.svg#stars"></use>
+                        </svg>
+                    </div>
+                    <div class="features__content">
+                        <div class="features__title">Быстро</div>
+                        <div class="features__subtitle">Делаем работу быстро <br> и качественно</div>
+                    </div>
+                </div>
+                <div class="features__item features__item-clock">
+                    <div class="features__icon">
+                        <svg>
+                            <use href="./images/icons.svg#time"></use>
+                        </svg>
+                    </div>
+                    <div class="features__content">
+                        <div class="features__title">Удобно</div>
+                        <div class="features__subtitle">Удобный интерфейс <br> для всех устройств</div>
+                    </div>
+                </div>
+                <div class="features__item features__item-safe">
+                    <div class="features__icon">
+                        <svg>
+                            <use href="./images/icons.svg#shield"></use>
+                        </svg>
+                    </div>
+                    <div class="features__content">
+                        <div class="features__title">Надёжно</div>
+                        <div class="features__subtitle">Ваши данные всегда <br> под защитой</div>
+                    </div>
+                </div>
+                <div class="features__item features__item-info">
+                    <div class="features__icon">
+                        <svg>
+                            <use href="./images/icons.svg#faq"></use>
+                        </svg>
+                    </div>
+                    <div class="features__content">
+                        <div class="features__title">Информативно</div>
+                        <div class="features__subtitle">Всегда актуальная <br> информация</div>
+                    </div>
+                </div>
+            </section>
 
+
+            <section class="cards">
+                <div class="cards__item  cards__item-title cards__item-title--before">
+                    <h2>02. Сетка — grid template columns and grid template rows</h2>
+                </div>
+                <div class="cards__item">
+                    <div class="cards__inner">
+                        <div class="cards__inner-item">
+                            <img class="cards__img cards__img-big" src="./images/mountain-1.jpg" alt="mountain-1">
+                        </div>
+                        <div class="cards__inner-item cards__inner-item-big">
+                            <div class="cards__title">Заголовок карточки</div>
+                            <div class="cards__subtitle">
+                                Это пример большой карточки, <br> которая занимает 2 строки grid
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="cards__item">
+                    <div class="cards__inner">
+                        <div class="cards__inner-item cards__inner-item-small">
+                            <img class="cards__img" src="./images/mountain-2.jpg" alt="mountain-2">
+                        </div>
+                        <div class="cards__inner-item cards__inner-item-small">
+                            <div class="cards__title">Карточка 1</div>
+                            <div class="cards__subtitle">Небольшая карточка справа сверху</div>
+                        </div>
+                        <div class="cards__inner-item cards__inner-item-small">
+                            <img class="cards__img" src="./images/mountain-3.jpg" alt="mountain-3">
+                        </div>
+                        <div class="cards__inner-item cards__inner-item-small">
+                            <div class="cards__title">Карточка 2</div>
+                            <div class="cards__subtitle">Небольшая карточка справа снизу</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="grid-lines">
+                <div class="grid-lines__item grid-lines__item-title grid-lines__item-title--before">
+                    <h2>03. Сетка — grid-column and grid-row (По линиям грида)</h2>
+                </div>
+                <div class="grid-lines__item grid-lines__item-sidebar item-sidebar">
+                    <div class="item-sidebar__title">Сайдбар</div>
+                    <div class="item-sidebar__subtitle">Навигация</div>
+                    <nav class="item-sidebar__menu">
+                        <li class="item-sidebar__list">
+                            <a href="#" class="item-sidebar__link">Главная</a>
+                        </li>
+                        <li class="item-sidebar__list">
+                            <a href="#" class="item-sidebar__link">Каталог</a>
+                        </li>
+                        <li class="item-sidebar__list">
+                            <a href="#" class="item-sidebar__link">Услуги</a>
+                        </li>
+                        <li class="item-sidebar__list">
+                            <a href="#" class="item-sidebar__link">Блог</a>
+                        </li>
+                        <li class="item-sidebar__list">
+                            <a href="#" class="item-sidebar__link">Контакты</a>
+                        </li>
+                    </nav>
+                </div>
+                <div class="grid-lines__item grid-lines__item-header item-header">
+                    <div class="item-header__title">Шапка контента</div>
+                    <div class="item-header__subtitle">Здесь может быть важная информация или баннер.</div>
+                </div>
+                <div class="grid-lines__item grid-lines__item-main item-main">
+                    <div class="item-main__title">Основной контент</div>
+                    <div class="item-main__subtitle">Этот блок занимает одну колонку и 2 строки.</div>
+                    <div class="item-main__subtitle">Удобно для текстового контента</div>
+                </div>
+                <div class="grid-lines__item grid-lines__item-aside item-aside">
+                    <div class="item-aside__title">Дополнительный блок</div>
+                    <div class="item-aside__subtitle">Сюда можно разместить <br> дополнительную информацию <br> или виджеты.</div>
+                </div>
+                <div class="grid-lines__item grid-lines__item-footer item-footer">
+                    <div class="item-footer__title">Футер</div>
+                    <div class="item-footer__subtitle">&copy; 2026 Тренировочный макет</div>
+                </div>
+            </section>
+            <section class="grid-areas">
+                <div class="grid-areas__item grid-areas__item-title--before">
+                    <h2>04. Сетка — grid template areas</h2>
+                </div>
+                <div class="grid-areas__item grid-areas__item-header">
+                    <div class="grid-areas__title">Header (шапка)</div>
+                </div>
+                <div class="grid-areas__item grid-areas__item-sidebar">
+                    <aside class="grid-areas__title">Sidebar (меню)</aside>
+                </div>
+                <div class="grid-areas__item grid-areas__item-main">
+                    <div class="grid-areas__title">Main Content (основной контент)</div>
+                </div>
+                <div class="grid-areas__item grid-areas__item-ads">
+                    <div class="grid-areas__title">Ads (реклама)</div>
+                </div>
+                <div class="grid-areas__item grid-areas__item-footer">
+                    <div class="grid-areas__title">Footer (подвал)</div>
+                </div>
+            </section>
+            <section class="selectors">
+                <div class="selectors__item selectors__item-title--before">
+                    <h2>05. Селекторы CSS — комбинаторы, атрибуты и псевдоклассы</h2>
+                </div>
+                <div class="selectors__item">
+                    <div class="selectors__item-child item-child">
+                        <div class="item-child__title">A</div>
+                        <div class="item-child__title item-child__title-svg item-child__title--active">B
+                            <svg class="item-child__svg"><use href="./images/icons.svg#cursor"></use></svg>
+                        </div>
+                        <div class="item-child__title">C</div>
+                    </div>
+                </div>
+                <div class="selectors__item">
+                    <ol class="selectors-links">
+                        <li><a href="#" target="__blank" class="selectors-links__link">Главная</a></li>
+                        <li><a href="#" target="__blank" class="selectors-links__link">Услуги</a></li>
+                        <li><a href="#" class="except-selectors selectors-links__link">Контакты</a></li>
+                    </ol>
+                </div>
+                <div class="selectors__item selectors-btns">
+                    <button type="button" class="selectors-btns__btn">Подробнее</button>
+                    <a href="#" class="selectors-btns__link">Перейти</a>
+                    <input type="button" class="selectors-btns__input" value="Заказать">
+                </div>
+                <div class="selectors__item selectors-content">
+                    <h3 class="selectors-content__title">Заголовок</h3>
+                    <p class="selectors-content__subtitle">Абзац</p>
+                    <span class="selectors-content__text">Текст</span>
+                </div>
+                <div class="selectors__item selectors-сharacter">
+                    <h3 class="selectors-character__title">Черты разработчика</h3>
+                    <ol class="selectors-character__lists">
+                        <li class="selectors-character__list">Усидчивость</li>
+                        <li class="selectors-character__list">Любопытство</li>
+                        <li class="selectors-character__list">Системное мышление</li>
+                    </ol>
+                </div>
+                <div class="selectors__item selectors-expressions">
+                    <h3 class="selectors-expressions__title">Фразы программиста</h3>
+                    <ol class="selectors-expressions__lists">
+                        <li class="selectors-expressions__list">«Почему не работает?..»</li>
+                        <li class="selectors-expressions__list">«Быстро поправлю»</li>
+                        <li class="selectors-expressions__list">«Думаю больше, чем пишу»</li>
+                    </ol>
+                </div>
+                <div class="selectors__item selectors-rules">
+                    <h3 class="selectors-rules__title">Правила верстки</h3>
+                    <ol class="selectors-rules__lists">
+                        <li class="selectors-rules__list">Структура</li>
+                        <li class="selectors-rules__list">Адаптив</li>
+                        <li class="selectors-rules__list">Чистота кода</li>
+                    </ol>
+                </div>
+                <div class="selectors__item selectors-cards">
+                    <div class="selectors-cards__item">1</div>
+                    <div class="selectors-cards__item">2</div>
+                    <div class="selectors-cards__item">3</div>
+                    <div class="selectors-cards__item">4</div>
+                </div>
+            </section>
+        </div>
+    </main>
+</body>
 </html>
