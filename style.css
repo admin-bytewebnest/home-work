@@ -1,0 +1,115 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.form {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    border: solid 2px black;
+    max-width: 600px;
+    min-height: 600px;
+    margin-top: 50px;
+    border-radius: 20px;
+    padding: 20px 40px;
+
+}
+.form__field {
+    margin-top: 20px;
+}
+.form__title,
+.form__subtitle {
+    text-align: center;
+}
+
+.form__subtitle {
+    margin-top: 20px;
+}
+
+.form__name,
+.form__email,
+.form__password,
+.form__message{
+    font-weight: bold;
+}
+.form__name + .form__input:invalid {
+    outline-color: red;
+}
+.form__name + .form__input:valid {
+    outline-color: green;
+}
+
+
+.form__input:invalid {
+    outline-color: red;
+}
+.form__input:valid {
+    outline-color: green;
+}
+
+
+.form__field:has(#messageNo:checked) .form__input {
+    display: none;
+}
+
+.form__field:has(#messageYes:checked) .form__input {
+    display: block;
+}
+
+.form__checkbox {
+    accent-color: green;
+}
+
+
+
+
+
+
+
+
+
+
+.form__input {
+    padding: 10px 20px;
+    width: 100%;
+    margin-top: 5px;
+}
+.form__checkbox {
+    
+}
+.form__checkbox[type='checkbox'] {
+    width: 20px;
+    height: 20px;
+}
+.form__field:nth-of-type(6) {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+.form__message {
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.form__checkbox a {
+    color: blue;
+    text-decoration: none;
+}
+
+.form__btn {
+    background-color: rgba(44, 44, 186, 0,8);
+    color: white;
+    outline: none;
+    border: 0;
+    cursor: pointer;
+    margin-top: 20px;
+    padding: 20px 60px;
+    width: max-content;
+    margin-left: auto;
+    
+}
+
+.form:has(.form__checkbox:checked) .form__btn {
+    background-color: blue;
+}
