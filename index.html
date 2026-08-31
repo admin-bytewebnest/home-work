@@ -1,64 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Вкладка</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Домашня робота</title>
+  <link rel="stylesheet" href="./css/index.css">
 </head>
+
 <body>
-    <form class="form" action="#">
-        <h2 class="form__title">Створіть обліковий запис</h2>
-        <p class="form__subtitle">Будь ласка, заповніть форму реєстрації</p>
-
-        <!--Поле имя-->
-        <div class="form__field">
-            <label class="form__name" for="">Ім'я</label>
-            <input class="form__input" type="text" placeholder="Введіть ваше ім'я" required>
+  <header>
+    <div class="container">
+      <div class="header">
+        <div class="header__logo"><a href="#" class="header__menu-link">Brand</a></div>
+        <nav class="header__menu">
+          <li class="header__menu-list"><a href="#" class="header__menu-link">Головна</a></li>
+          <li class="header__menu-list"><a href="#" class="header__menu-link">Про нас</a></li>
+          <li class="header__menu-list header__menu-list--services">
+            <a href="#" class="header__menu-link">Послуги<svg class="header__menu-svg" viewBox="0 0 24 24" fill="none"
+                xmlns="http://www.w3.org/2000/svg" stroke="#ffffff">
+                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                <g id="SVGRepo_iconCarrier">
+                  <g clip-path="url(#fffffffclip0_429_11251)">
+                    <path d="M7 10L12 15" stroke="#fffffff" stroke-width="2.5" stroke-linecap="round"
+                      stroke-linejoin="round"></path>
+                    <path d="M12 15L17 10" stroke="#fffffff" stroke-width="2.5" stroke-linecap="round"
+                      stroke-linejoin="round"></path>
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_429_11251">
+                      <rect fill="white"></rect>
+                    </clipPath>
+                  </defs>
+                </g>
+              </svg></a>
+            <ul class="header-services">
+              <li class="header-services__list"><a href="#" class="header__menu-link">Розробка</a></li>
+              <li class="header-services__list"><a href="#" class="header__menu-link">Дизайн</a></li>
+              <li class="header-services__list header__menu-list--promotion">
+                <a href="#" class="header__menu-link">Просування<svg class="header__menu-svg" viewBox="0 0 24 24"
+                    fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#ffffff">
+                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                    <g id="SVGRepo_iconCarrier">
+                      <g clip-path="url(#fffffffclip0_429_11251)">
+                        <path d="M7 10L12 15" stroke="#fffffff" stroke-width="2.5" stroke-linecap="round"
+                          stroke-linejoin="round"></path>
+                        <path d="M12 15L17 10" stroke="#fffffff" stroke-width="2.5" stroke-linecap="round"
+                          stroke-linejoin="round"></path>
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_429_11251">
+                          <rect fill="white"></rect>
+                        </clipPath>
+                      </defs>
+                    </g>
+                  </svg></a>
+                <ul class="header-promotion">
+                  <li class="header-promotion__list"><a href="#" class="header__menu-link">seo</a></li>
+                  <li class="header-promotion__list"><a href="#" class="header__menu-link">Google-Реклама</a></li>
+                </ul>
+              </li>
+              <li class="header-services__list"><a href="#" class="header__menu-link">Консультації</a></li>
+            </ul>
+          </li>
+          <li class="header__menu-list"><a href="#" class="header__menu-link">Контакти</a></li>
+        </nav>
+      </div>
+    </div>
+  </header>
+  <main>
+    <div class="container">
+      <img class="hero__img" src="./images/background.png" alt="hero">
+      <section class="hero">
+        <div class="hero__inner">
+          <span class="hero__subtitle">Цифрові рішення для бізнесу</span>
+          <h1 class="hero__title">Створюємо цифрові рішення <br>
+            для <span class="hero__accent">зростання вашого бізнесу</span></h1>
+            <p class="hero__subtitle">
+              Сайти, дизайн та просування - об'єднуємо все необхідне, щоб ваш бізнес <br> виглядав професійно, приваблював клієнтів та розвивався у цифровому середовищі.
+            </p>
+            <button class="hero__btn">Обговорити проект <svg viewBox="0 -0.5 25 25" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M15.5 7.75C15.0858 7.75 14.75 8.08579 14.75 8.5C14.75 8.91421 15.0858 9.25 15.5 9.25V7.75ZM19.5 9.25C19.9142 9.25 20.25 8.91421 20.25 8.5C20.25 8.08579 19.9142 7.75 19.5 7.75V9.25ZM20.25 8.5C20.25 8.08579 19.9142 7.75 19.5 7.75C19.0858 7.75 18.75 8.08579 18.75 8.5H20.25ZM18.75 12.5C18.75 12.9142 19.0858 13.25 19.5 13.25C19.9142 13.25 20.25 12.9142 20.25 12.5H18.75ZM20.0303 9.03033C20.3232 8.73744 20.3232 8.26256 20.0303 7.96967C19.7374 7.67678 19.2626 7.67678 18.9697 7.96967L20.0303 9.03033ZM12.5 15.5L11.9697 16.0303C12.2626 16.3232 12.7374 16.3232 13.0303 16.0303L12.5 15.5ZM9.5 12.5L10.0303 11.9697C9.73744 11.6768 9.26256 11.6768 8.96967 11.9697L9.5 12.5ZM4.96967 15.9697C4.67678 16.2626 4.67678 16.7374 4.96967 17.0303C5.26256 17.3232 5.73744 17.3232 6.03033 17.0303L4.96967 15.9697ZM15.5 9.25H19.5V7.75H15.5V9.25ZM18.75 8.5V12.5H20.25V8.5H18.75ZM18.9697 7.96967L11.9697 14.9697L13.0303 16.0303L20.0303 9.03033L18.9697 7.96967ZM13.0303 14.9697L10.0303 11.9697L8.96967 13.0303L11.9697 16.0303L13.0303 14.9697ZM8.96967 11.9697L4.96967 15.9697L6.03033 17.0303L10.0303 13.0303L8.96967 11.9697Z" fill="currentColor"></path> </g></svg></button>
         </div>
-
-        <!--Поле почта-->
-        <div class="form__field">
-            <label class="form__email" for="">Email</label>
-            <input class="form__input" type="email" placeholder="Введіть ваш Email" required>
-        </div>
-
-
-        <!--Поле пароль-->
-        <div class="form__field">
-            <label class="form__password" for="">Пароль</label>
-            <input class="form__input" type="password" placeholder="Введіть пароль" required>
-        </div>
-
-
-        <!--Поле пароль проверка-->
-        <div class="form__field">
-            <label class="form__password" for="">Повторіть пароль</label>
-            <input class="form__input" type="password" placeholder="Введіть пароль знову" required>
-        </div>
-
-
-        <!--Поле связь-->
-        <div class="form__field">
-            <label class="form__message" for="">Чи прив'язати Telegram до навчального запису?</label><br>
-            <input type="radio" name="telegram" id="messageYes">
-            <label for="messageYes">Так</label>
-            <input type="radio" checked name="telegram" id="messageNo">
-            <label for="messageNo">Ні</label>
-            <input class="form__input" type="text" placeholder="Введіть логін у форматі @user_name">
-        </div>
-
-
-        <!--Поле политики-->
-        <div class="form__field">
-            <input class="form__checkbox" type="checkbox" required id="politico">
-            <label class="form__checkbox" for="politico">Я згоден з <a href="#">правилами</a></label>
-        </div>
-        
-        <!--Кнопка-->
-        <input class="form__btn" type="submit" value="Надіслати">
-        
-
-    </form>
+      </section>
+    </div>
+  </main>
+  <footer></footer>
 </body>
+
 </html>
