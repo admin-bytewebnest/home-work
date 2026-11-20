@@ -1,56 +1,457 @@
-<!-- Сообщаем браузеру как стоит обрабатывать эту страницу -->
-<!DOCTYPE html>
-<!-- Оболочка документа, указываем язык содержимого -->
+<!doctype html>
 <html lang="ru">
-	<!-- Заголовок страницы, контейнер для других важных данных (не отображается) -->
-	<head>
-		<!-- Заголовок страницы в браузере -->
-		<title>Методология БЭМ</title>
-		<!-- Подключаем CSS -->
-		<link rel="stylesheet" href="css/style.css" />
-		<!-- Кодировка страницы -->
-		<meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
-	</head>
-	<!-- Отображаемое тело страницы -->
-	<body>
-		<div class="about">
-			<div class="about__body">
-				<div class="about__header">
-					<div class="about__title title">ABOUT</div>
-					<div class="about__text">We specialize in contemporary, functional, and stunning websites with design that really brings that "WOW" factor. 
-In our design process, we make sure to stay one step ahead of the latest trends, 
-never forgetting to abide by key web standards.</div>
-				</div>
-				<div class="about__row">
-					<div class="about__column">
-						<div class="item-about">
-							<div class="item-about__icon">
-								<img src="img/about/01.png" alt="" />
-							</div>
-							<div class="item-about__title">WEB</div>
-							<div class="item-about__text">We tend to deliver unique and functional design, through innovation and creativity.</div>
-						</div>
-					</div>
-					<div class="about__column">
-						<div class="item-about">
-							<div class="item-about__icon">
-								<img src="img/about/02.png" alt="" />
-							</div>
-							<div class="item-about__title">iOS AND ANDROID</div>
-							<div class="item-about__text">We seek to bring new businesses and customers closer together through valuable insights and proper targeting.</div>
-						</div>
-					</div>
-					<div class="about__column">
-						<div class="item-about">
-							<div class="item-about__icon">
-								<img src="img/about/03.png" alt="" />
-							</div>
-							<div class="item-about__title">MARKETING</div>
-							<div class="item-about__text">We’ll help you establish the right goals and build the right paths. Success depends on setting the right intention.</div>
-						</div>
-					</div>
-				</div>
-			</div>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="color-scheme" content="light">
+	<title>Практика CSS :has() — 15 заданий</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+	<header class="site-header">
+		<div class="container header-inner">
+			<a class="brand" href="#" aria-label="Практика CSS">
+				<span class="brand-mark">CSS</span>
+				<span>Практика селекторов</span>
+			</a>
+			<span class="header-note"><span class="header-note-dot"></span> 15 практических заданий</span>
 		</div>
-	</body>
+	</header>
+
+	<main class="container">
+		<section class="intro">
+			<p class="eyebrow">CSS SELECTORS · PRACTICE</p>
+			<h1>Разбираемся с <code>:has()</code></h1>
+			<p class="intro-text">15 практических задач, чтобы научиться выбирать элементы по их содержимому и
+				состоянию. Выполняй задания по порядку и проверяй себя на интерактивных примерах.</p>
+			<div class="intro-meta">
+				<span><i class="status-dot"></i> Примеры работают в браузере</span>
+				<span>HTML + CSS</span>
+			</div>
+		</section>
+
+		<div class="section-heading">
+			<div>
+				<p class="eyebrow">ПРАКТИКА · 01—15</p>
+				<h2>Закрепи на практике</h2>
+			</div>
+			<p class="section-caption">Условие слева · интерактивный пример справа</p>
+		</div>
+
+		<div class="tasks">
+			<article class="task" id="task-01">
+				<div class="task-info">
+					<div class="task-top"><span class="task-number">01</span></div>
+					<div class="task-kicker">ТВОЯ ЗАДАЧА</div>
+					<p>Выдели карточку, внутри которой есть ссылка с атрибутом target="_blank". Только такая карточка
+						должна получить акцентную рамку.</p>
+					<details class="task-hint">
+						<summary>Показать подсказку</summary>
+						<div class="task-hint__content">
+							<code>.demo-card:has(a[target=&quot;_blank&quot;])</code>
+							<p>Проверь наличие ссылки с нужным значением атрибута target внутри карточки.</p>
+						</div>
+					</details>
+				</div>
+				<div class="task-demo">
+					<div class="demo-label">Результат</div>
+					<div class="demo-grid two">
+						<div class="demo-card has-external"><strong>Внешняя страница</strong><a href="#" target="_blank"
+								rel="noreferrer">Открыть сайт ↗</a></div>
+						<div class="demo-card"><strong>Мой профиль</strong><a href="#task-01">Открыть профиль</a></div>
+					</div>
+				</div>
+			</article>
+
+			<article class="task" id="task-02">
+				<div class="task-info">
+					<div class="task-top"><span class="task-number">02</span></div>
+					<div class="task-kicker">ТВОЯ ЗАДАЧА</div>
+					<p>Измени оформление строки, если переключатель внутри неё включён.</p>
+					<details class="task-hint">
+						<summary>Показать подсказку</summary>
+						<div class="task-hint__content">
+							<code>.setting:has(input:checked)</code>
+							<p>Псевдокласс :checked выбирает отмеченный checkbox или radio внутри строки.</p>
+						</div>
+					</details>
+				</div>
+				<div class="task-demo">
+					<div class="demo-label">Результат</div>
+					<label class="setting"><span><strong>Уведомления</strong><small>Получать обновления по
+								почте</small></span><input type="checkbox" checked></label>
+					<label class="setting"><span><strong>Тёмная тема</strong><small>Использовать тёмное
+								оформление</small></span><input type="checkbox"></label>
+				</div>
+			</article>
+
+			<article class="task" id="task-03">
+				<div class="task-info">
+					<div class="task-top"><span class="task-number">03</span></div>
+					<div class="task-kicker">ТВОЯ ЗАДАЧА</div>
+					<p>Подсвети всю форму, когда любое поле ввода находится в фокусе.</p>
+					<details class="task-hint">
+						<summary>Показать подсказку</summary>
+						<div class="task-hint__content">
+							<code>.search-form:has(input:focus)</code>
+							<p>Псевдокласс :focus срабатывает, пока поле ввода находится в фокусе.</p>
+						</div>
+					</details>
+				</div>
+				<div class="task-demo">
+					<div class="demo-label">Результат</div>
+					<form class="search-form" action="#">
+						<label for="search-demo">Поиск по сайту</label>
+						<div class="search-control"><input id="search-demo" type="search"
+								placeholder="Например, CSS Grid"><button type="submit" aria-label="Найти">⌕</button>
+						</div>
+						<small>При фокусе на поле подсвечивается весь блок.</small>
+					</form>
+				</div>
+			</article>
+
+			<article class="task" id="task-04">
+				<div class="task-info">
+					<div class="task-top"><span class="task-number">04</span></div>
+					<div class="task-kicker">ТВОЯ ЗАДАЧА</div>
+					<p>Покажи успешное состояние карточки, когда введён корректный адрес электронной почты.</p>
+					<details class="task-hint">
+						<summary>Показать подсказку</summary>
+						<div class="task-hint__content">
+							<code>.field-card:has(input:valid)</code>
+							<p>Псевдокласс :valid выбирает поле, которое проходит встроенную HTML-валидацию.</p>
+						</div>
+					</details>
+				</div>
+				<div class="task-demo">
+					<div class="demo-label">Результат</div>
+					<div class="field-card valid-demo">
+						<label for="valid-email">Электронная почта</label>
+						<input id="valid-email" type="email" required placeholder="name@example.com">
+						<small>Например: hello@example.com</small>
+					</div>
+				</div>
+			</article>
+
+			<article class="task" id="task-05">
+				<div class="task-info">
+					<div class="task-top"><span class="task-number">05</span></div>
+					<div class="task-kicker">ТВОЯ ЗАДАЧА</div>
+					<p>Выдели карточку, если адрес электронной почты введён некорректно или обязательное поле оставлено
+						пустым.</p>
+					<details class="task-hint">
+						<summary>Показать подсказку</summary>
+						<div class="task-hint__content">
+							<code>.field-card:has(input:invalid)</code>
+							<p>Псевдокласс :invalid выбирает поле, которое не проходит встроенную HTML-валидацию.</p>
+						</div>
+					</details>
+				</div>
+				<div class="task-demo">
+					<div class="demo-label">Результат</div>
+					<div class="field-card invalid-demo">
+						<label for="invalid-email">Рабочая почта</label>
+						<input id="invalid-email" type="email" required placeholder="Введите email">
+						<small>Поле обязательно для заполнения.</small>
+					</div>
+				</div>
+			</article>
+
+			<article class="task" id="task-06">
+				<div class="task-info">
+					<div class="task-top"><span class="task-number">06</span></div>
+					<div class="task-kicker">ТВОЯ ЗАДАЧА</div>
+					<p>Выдели карточки, в которых есть изображение или видео.</p>
+					<details class="task-hint">
+						<summary>Показать подсказку</summary>
+						<div class="task-hint__content">
+							<code>.media:has(img, video)</code>
+							<p>Перечисли альтернативы через запятую внутри :has(). Достаточно, чтобы нашёлся хотя бы
+								один элемент.</p>
+						</div>
+					</details>
+				</div>
+				<div class="task-demo">
+					<div class="demo-label">Результат</div>
+					<div class="demo-grid media-comparison">
+						<div class="media">
+							<div class="fake-image"><img
+									src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='58'%3E%3Crect width='100%25' height='100%25' fill='%23354c47'/%3E%3Ctext x='50%25' y='55%25' fill='%23c2d5ca' text-anchor='middle' font-size='10'%3EIMG%3C/text%3E%3C/svg%3E"
+									alt="Миниатюра проекта"></div><strong>Фото проекта</strong>
+						</div>
+						<div class="media">
+							<div class="fake-video"><video aria-label="Видеообзор"></video><span>▶</span></div>
+							<strong>Видеообзор</strong>
+						</div>
+						<div class="media">
+							<div class="fake-empty">—</div><strong>Текстовая заметка</strong>
+						</div>
+					</div>
+				</div>
+			</article>
+
+			<article class="task" id="task-07">
+				<div class="task-info">
+					<div class="task-top"><span class="task-number">07</span></div>
+					<div class="task-kicker">ТВОЯ ЗАДАЧА</div>
+					<p>Выдели товар, если он одновременно отмечен как доступный и содержит кнопку покупки.</p>
+					<details class="task-hint">
+						<summary>Показать подсказку</summary>
+						<div class="task-hint__content">
+							<code>.product:has(.stock):has(button)</code>
+							<p>Поставь два :has() подряд: первый проверяет наличие .stock, второй — button. Оба условия
+								обязательны.</p>
+						</div>
+					</details>
+				</div>
+				<div class="task-demo">
+					<div class="demo-label">Результат</div>
+					<div class="demo-grid two">
+						<div class="product"><span class="stock">В наличии</span><strong>Наушники Studio</strong><button
+								type="button">Купить</button></div>
+						<div class="product"><span class="stock">В наличии</span><strong>Колонка Mini</strong></div>
+						<div class="product"><strong>Клавиатура Pro</strong><button type="button">Купить</button></div>
+					</div>
+				</div>
+			</article>
+
+			<article class="task" id="task-08">
+				<div class="task-info">
+					<div class="task-top"><span class="task-number">08</span></div>
+					<div class="task-kicker">ТВОЯ ЗАДАЧА</div>
+					<p>Измени оформление текста-подсказки, если переключатель согласия включён.</p>
+					<details class="task-hint">
+						<summary>Показать подсказку</summary>
+						<div class="task-hint__content">
+							<code>.consent:has(input:checked) .hint</code>
+							<p>Сначала найди .consent с отмеченным input, а затем выбери .hint внутри этого контейнера.
+							</p>
+						</div>
+					</details>
+				</div>
+				<div class="task-demo">
+					<div class="demo-label">Результат</div>
+					<div class="consent"><label><input type="checkbox"> Я согласен с условиями</label>
+						<p class="hint">После согласия эта подсказка меняет цвет.</p>
+					</div>
+					<div class="consent"><label><input type="checkbox" checked> Подписаться на новости</label>
+						<p class="hint">У этого блока состояние уже активно.</p>
+					</div>
+				</div>
+			</article>
+
+			<article class="task" id="task-09">
+				<div class="task-info">
+					<div class="task-top"><span class="task-number">09</span></div>
+					<div class="task-kicker">ТВОЯ ЗАДАЧА</div>
+					<p>Выдели карточки с изображением, кроме тех, которые отмечены как отсутствующие в продаже.</p>
+					<details class="task-hint">
+						<summary>Показать подсказку</summary>
+						<div class="task-hint__content">
+							<code>.item:has(img):not(:has(.sold-out))</code>
+							<p>Проверь наличие img и исключи карточки, внутри которых есть .sold-out.</p>
+						</div>
+					</details>
+				</div>
+				<div class="task-demo">
+					<div class="demo-label">Результат</div>
+					<div class="demo-grid three">
+						<div class="item">
+							<div class="thumb"><img
+									src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='58'%3E%3Crect width='100%25' height='100%25' fill='%23354c47'/%3E%3Ctext x='50%25' y='55%25' fill='%23c2d5ca' text-anchor='middle' font-size='10'%3EIMG%3C/text%3E%3C/svg%3E"
+									alt="Изображение товара"></div><strong>Рюкзак</strong><small>Доступен</small>
+						</div>
+						<div class="item">
+							<div class="thumb"><img
+									src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='58'%3E%3Crect width='100%25' height='100%25' fill='%23354c47'/%3E%3Ctext x='50%25' y='55%25' fill='%23c2d5ca' text-anchor='middle' font-size='10'%3EIMG%3C/text%3E%3C/svg%3E"
+									alt="Изображение товара"></div><span class="sold-out">Нет в
+								наличии</span><strong>Кроссовки</strong>
+						</div>
+						<div class="item"><strong>Подарочная карта</strong><small>Без изображения</small></div>
+					</div>
+				</div>
+			</article>
+
+			<article class="task" id="task-10">
+				<div class="task-info">
+					<div class="task-top"><span class="task-number">10</span></div>
+					<div class="task-kicker">ТВОЯ ЗАДАЧА</div>
+					<p>Найди блок, в котором есть заголовок, но нет описания.</p>
+					<details class="task-hint">
+						<summary>Показать подсказку</summary>
+						<div class="task-hint__content">
+							<code>.article:not(:has(.description)):has(h4)</code>
+							<p>Через :not(:has()) исключи блоки с .description, а через :has() проверь наличие h4.</p>
+						</div>
+					</details>
+				</div>
+				<div class="task-demo">
+					<div class="demo-label">Результат</div>
+					<div class="demo-grid three">
+						<div class="article">
+							<h4>Новости продукта</h4><small class="description">Описание присутствует.</small>
+						</div>
+						<div class="article">
+							<h4>Обновление интерфейса</h4>
+						</div>
+						<div class="article"><small class="description">Есть текст, но нет заголовка.</small></div>
+					</div>
+				</div>
+			</article>
+
+			<article class="task" id="task-11">
+				<div class="task-info">
+					<div class="task-top"><span class="task-number">11</span></div>
+					<div class="task-kicker">ТВОЯ ЗАДАЧА</div>
+					<p>Выдели список, если в нём остался хотя бы один невыполненный пункт.</p>
+					<details class="task-hint">
+						<summary>Показать подсказку</summary>
+						<div class="task-hint__content">
+							<code>.todo:has(.todo-item:not(.done))</code>
+							<p>Внутри :has() найди .todo-item, у которого отсутствует класс .done.</p>
+						</div>
+					</details>
+				</div>
+				<div class="task-demo">
+					<div class="demo-label">Результат</div>
+					<div class="demo-grid two">
+						<div class="todo"><strong>Запуск проекта</strong><span class="todo-item done">✓ Подготовить
+								макет</span><span class="todo-item done">✓ Сверстать шапку</span></div>
+						<div class="todo"><strong>Новая страница</strong><span class="todo-item done">✓ Создать
+								структуру</span><span class="todo-item">○ Добавить стили</span></div>
+					</div>
+				</div>
+			</article>
+
+			<article class="task" id="task-12">
+				<div class="task-info">
+					<div class="task-top"><span class="task-number">12</span></div>
+					<div class="task-kicker">ТВОЯ ЗАДАЧА</div>
+					<p>Выдели панель, в которой есть заголовок.</p>
+					<details class="task-hint">
+						<summary>Показать подсказку</summary>
+						<div class="task-hint__content">
+							<code>.panel:has(:is(h2, h3, h4))</code>
+							<p>Используй :is() для объединения h2, h3 и h4 внутри проверки :has().</p>
+						</div>
+					</details>
+				</div>
+				<div class="task-demo">
+					<div class="demo-label">Результат</div>
+					<div class="demo-grid two">
+						<div class="panel">
+							<h2>Заголовок</h2>
+						</div>
+						<div class="panel">
+							<p>Просто текст без заголовка</p>
+						</div>
+					</div>
+				</div>
+			</article>
+
+			<article class="task" id="task-13">
+				<div class="task-info">
+					<div class="task-top"><span class="task-number">13</span></div>
+					<div class="task-kicker">ТВОЯ ЗАДАЧА</div>
+					<p>Измени оформление абзаца, который расположен сразу после карточки с заголовком.</p>
+					<details class="task-hint">
+						<summary>Показать подсказку</summary>
+						<div class="task-hint__content">
+							<code>.story:has(:is(h3, h4, h5)) + p</code>
+							<p>Найди .story с одним из заголовков через :is(), затем выбери следующий соседний абзац с
+								помощью +.</p>
+						</div>
+					</details>
+				</div>
+				<div class="task-demo">
+					<div class="demo-label">Результат</div>
+					<div class="story">
+						<h4>История дизайна</h4>
+					</div>
+					<p class="story-caption">Этот абзац — следующий сосед карточки, поэтому он выделен.</p>
+					<div class="story">
+						<div>Карточка без подходящего заголовка</div>
+					</div>
+					<p class="story-caption">Этот абзац остаётся обычным.</p>
+				</div>
+			</article>
+
+			<article class="task" id="task-14">
+				<div class="task-info">
+					<div class="task-top"><span class="task-number">14</span></div>
+					<div class="task-kicker">ТВОЯ ЗАДАЧА</div>
+					<p>Выдели список, если в его первом пункте есть метка важности.</p>
+					<details class="task-hint">
+						<summary>Показать подсказку</summary>
+						<div class="task-hint__content">
+							<code>.list:has(li:first-of-type .priority)</code>
+							<p>Проверь наличие .priority внутри первого элемента li с помощью :first-of-type.</p>
+						</div>
+					</details>
+				</div>
+				<div class="task-demo">
+					<div class="demo-label">Результат</div>
+					<div class="demo-grid two">
+						<div class="list"><strong>План на сегодня</strong>
+							<ul>
+								<li><span class="priority">Важно</span> Подготовить урок</li>
+								<li>Проверить макет</li>
+								<li>Ответить на вопросы</li>
+							</ul>
+						</div>
+						<div class="list"><strong>План на завтра</strong>
+							<ul>
+								<li>Разобрать почту</li>
+								<li><span class="priority">Важно</span> Обновить проект</li>
+								<li>Сделать перерыв</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</article>
+
+			<article class="task" id="task-15">
+				<div class="task-info">
+					<div class="task-top"><span class="task-number">15</span></div>
+					<div class="task-kicker">ТВОЯ ЗАДАЧА</div>
+					<p>Выдели список, если в его последнем пункте есть метка срока сдачи.</p>
+					<details class="task-hint">
+						<summary>Показать подсказку</summary>
+						<div class="task-hint__content">
+							<code>.list:has(li:last-of-type .deadline)</code>
+							<p>Проверь наличие .deadline внутри последнего элемента li с помощью :last-of-type.</p>
+						</div>
+					</details>
+				</div>
+				<div class="task-demo">
+					<div class="demo-label">Результат</div>
+					<div class="demo-grid two">
+						<div class="list"><strong>Этапы проекта</strong>
+							<ul>
+								<li>Исследование</li>
+								<li>Дизайн</li>
+								<li><span class="deadline">Дедлайн</span> Сдать проект</li>
+							</ul>
+						</div>
+						<div class="list"><strong>План публикации</strong>
+							<ul>
+								<li><span class="deadline">Дедлайн</span> Подготовить текст</li>
+								<li>Проверить ссылки</li>
+								<li>Опубликовать</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</article>
+		</div>
+
+		<footer class="site-footer">
+			<span>Практика CSS <code>:has()</code></span>
+			<span>15 заданий · Учись на примерах</span>
+		</footer>
+	</main>
+</body>
+
 </html>
