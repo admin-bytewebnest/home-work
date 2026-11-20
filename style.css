@@ -1332,3 +1332,7 @@ input { accent-color: var(--green); }
   .task-hint summary { font-size: 13px; }
   .task-hint__content code { font-size: 12px; }
 }
+
+input  {
+    width: 95%  !important;
+}
